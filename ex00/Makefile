@@ -3,7 +3,9 @@ NAME	= Polymorphism
 SRCS	= main.cpp \
 		  Cat.cpp \
 		  Animal.cpp \
-		  Dog.cpp
+		  Dog.cpp \
+		  WrongAnimal.cpp \
+		  WrongCat.cpp
 
 
 OBJS		= $(SRCS:%.cpp=%.o)
