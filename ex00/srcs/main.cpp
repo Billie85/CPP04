@@ -1,8 +1,8 @@
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "../Animal.hpp"
+#include "../Dog.hpp"
+#include "../Cat.hpp"
+#include "../WrongAnimal.hpp"
+#include "../WrongCat.hpp"
 
 int main() 
 {
@@ -18,6 +18,7 @@ int main()
     delete meta;
     delete j;
     delete i;
+
   std::cout << "------------------------" << std::endl;
     const WrongAnimal* meta2 = new WrongAnimal();
     const WrongAnimal* i2 = new WrongCat();

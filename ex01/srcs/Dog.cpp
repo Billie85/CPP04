@@ -1,4 +1,4 @@
-#include "Dog.hpp"
+#include "../Dog.hpp"
 
 Dog::Dog()
 {
@@ -26,4 +26,9 @@ Dog &Dog::operator=(const Dog &other)
 void Dog::makeSound() const
 {
 	std::cout << "Woof Woof" << std::endl;
+}
+
+Brain const *Dog::GetBrain() const
+{
+	return (this->_brain);
 }
