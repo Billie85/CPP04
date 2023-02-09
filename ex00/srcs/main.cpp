@@ -19,13 +19,13 @@ int main()
     delete j;
     delete i;
 
-  std::cout << "------------------------" << std::endl;
-    const WrongAnimal* meta2 = new WrongAnimal();
-    const WrongAnimal* i2 = new WrongCat();
+  std::cout << "-------------wrong part-------------" << std::endl;
+    const WrongAnimal* animal = new WrongAnimal();
+    const WrongAnimal* cat = new WrongCat();
 
-    std::cout << i2->getType() << " " << std::endl;
-    i2->makeSound();  // will output the cat sound!
-    meta2->makeSound();
-    delete meta2;
-    delete i2;
+    std::cout << cat->getType() << " " << std::endl;
+    cat->makeSound();  // will output the cat sound!
+    animal->makeSound();
+    delete animal;
+    delete cat;
 }

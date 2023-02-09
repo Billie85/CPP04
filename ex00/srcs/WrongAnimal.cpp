@@ -1,20 +1,23 @@
 #include "../WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal(): type("WrongAnimal")
 {
-	this->type = "Wrong Animal";
 	std::cout << "WrongAnimal Default constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &other)
+WrongAnimal::WrongAnimal(std::string type): type(type)
 {
-	this->type = other.type;
-	std::cout << "WrongAnimal Copy constructor called" << std::endl;
+	std::cout << type << " is created in WrongAnimal constructor" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(const WrongAnimal &other): type(other.type)
+{
+	std::cout << type << " Copy constructor called" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "WrongAnimal destructor called" << std::endl;
+	std::cout << "WrongAnimal destructor destroy" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
