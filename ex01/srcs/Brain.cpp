@@ -1,38 +1,32 @@
 #include "../Brain.hpp"
 
-Brain::Brain()
+Brain::Brain() 
 {
-	std::cout << "Brain default constructor called" << std::endl;
-	for (int i = 0; i < 100; i++)
-	{
-		this->idea[i] = "idea!";
-	}
+	std::cout << "Brain constructor" << std::endl;
 }
-	
+
 Brain::Brain(const Brain &other)
 {
-	std::cout << "Brain copy constructor called" << std::endl;
-	for (int i = 0; i < 100; i++)
+	std::cout << this << "Brain copy constructor" << std::endl;
+	for (size_t i = 0; i < Idea; i++)
 	{
-		this->idea[i] = other.idea[i];
+		this->ideas[i] = other.ideas[i];
 	}
 }
 
 Brain &Brain::operator=(const Brain &other)
 {
-	for (int i = 0; i < 100; i++)
-	{
-		this->idea[i] = other.idea[i];
+	for (size_t i = 0; i < Idea; i++){
+		this->ideas[i] = other.ideas[i];
 	}
-	return(*this);
+	return (*this);
 }
 
-std::string const *Brain::GetIdea() const
-{
-	return(this->idea);
+std::string const *Brain::getIdeas() const{
+	return (this->ideas);
 }
 
-Brain::~Brain()
-{
-	std::cout << "Brain constructor destroy" << std::endl;
+Brain::~Brain(){
+	std::cout << "Brain destructor was destroyed." << std::endl;
+	std::cout << std::endl;
 }
