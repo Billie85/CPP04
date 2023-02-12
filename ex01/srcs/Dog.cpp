@@ -19,15 +19,17 @@ Dog::~Dog()
 
 Dog::Dog(const Dog &other): Animal(other) 
 {
-	_Brain = new Brain(*other._Brain);//<-here
+	_Brain = new Brain(*other._Brain);
+	std::cout << "Dog copy constructor" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &other)
 {
     Animal::operator=(other);
-    if (this != &other) {
+    if (this != &other) 
+	{
         delete _Brain;
-        _Brain = new Brain(*other._Brain);
+        this->_Brain = new Brain(*other._Brain);
     }
     return (*this);
 }
