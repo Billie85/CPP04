@@ -1,18 +1,17 @@
-NAME	= I_DONT_WANT_TO_SET
+NAME	= AbstractClass
 
 SRCS	= main.cpp \
 		  Cat.cpp \
 		  Animal.cpp \
 		  Dog.cpp \
-		  WrongAnimal.cpp \
-		  WrongCat.cpp
+		  Brain.cpp
 
 
 OBJS		= $(SRCS:%.cpp=%.o)
 
 CXX			= c++
 
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -Wall -Wextra -std=c++98
 
 all		: $(NAME)
 

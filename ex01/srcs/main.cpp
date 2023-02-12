@@ -6,7 +6,7 @@
 int main() 
 {
 	std::cout << "=========== Create ===========" << std::endl;
-	Animal *test1[8]; //defaultが呼ばれるべき...
+	Animal *test1[8];
 	for (size_t i = 0; i < 8; i++)
 	{
 		if (i < 8 / 2)
@@ -32,30 +32,26 @@ int main()
 	std::cout << std::endl;
 
 	std::cout << "=========== deep copy test 2(Cat) ===========" << std::endl;
-	Cat *cat = new Cat(*cat_1);//<-here
+	Cat *cat = new Cat(*cat_1);
 	std::cout << cat << std::endl;
 	std::cout << cat->getBrain() << std::endl;
 	std::cout << std::endl;
 
 
-	std::cout << "=========== shallow copy test 1(cat) ===========" << std::endl;
-	Cat *cat_2 = new Cat; //コピーコンストラクタが呼ばれない。
+/* 	std::cout << "=========== shallow copy test 1(cat) ===========" << std::endl;
+	Cat *cat_2 = new Cat;
 	Cat *cat_3 = cat_2;
 	std::cout << cat_2 << std::endl;
 	std::cout << cat_3 << std::endl;
+	std::cout << std::endl;
 
 	std::cout << "=========== shallow copy test 2(Cat) ===========" << std::endl;
 	Cat *cat_4;
-	cat_4 = new Cat; //operator=が呼ばれない。
+	cat_4 = new Cat;
 	Cat *cat_5 = cat_4;
 	std::cout << cat_4 << std::endl;
 	std::cout << cat_5 << std::endl;
-
-
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
+	std::cout << std::endl; */
 
 	std::cout << "=========== deep copy test 1(Dog) ===========" << std::endl;
 	Dog *Dog_1 = new Dog;
@@ -70,7 +66,7 @@ int main()
 	std::cout << std::endl;
 
 
-	std::cout << "=========== shallow copy test 1(Dog) ===========" << std::endl;
+/* 	std::cout << "=========== shallow copy test 1(Dog) ===========" << std::endl;
 	Dog *Dog_2 = new Dog;
 	Dog *Dog_3 = Dog_2;
 	std::cout << Dog_2 << std::endl;
@@ -81,18 +77,18 @@ int main()
 	Dog_4 = new Dog;
 	Dog *Dog_5 = Dog_4;
 	std::cout << Dog_4 << std::endl;
-	std::cout << Dog_5 << std::endl;
+	std::cout << Dog_5 << std::endl; */
 
-	std::cout << std::endl;
+	//std::cout << std::endl;
 	std::cout << "=========== Delete ===========" << std::endl;
 	delete(cat_1);
 	delete(cat);
-	delete(cat_2);
-	delete(cat_4);
+	//delete(cat_2);
+	//delete(cat_4);
 	delete(Dog_1);
 	delete(Dog_);
-	delete(Dog_2);
-	delete(Dog_4);
+	//delete(Dog_2);
+	//delete(Dog_4);
 	for (size_t i = 0; i < 8; i++)
 	{
 		delete(test1[i]);

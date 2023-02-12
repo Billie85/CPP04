@@ -25,14 +25,9 @@ Cat::~Cat()
 Cat::Cat(const Cat &other) : Animal(other) 
 {
 	_Brain = new Brain(*other._Brain);//<-here
+	std::cout << "cat copy constructor" << std::endl;
 }
 
-/* Cat const &Cat::operator=(const Cat &other)//before
-{
-	std::cout << "Cat operator= called" << std::endl;
-	this->Animal::type = other.type;
-	return(*this);
-} */
 Cat &Cat::operator=(const Cat &other)
 {
     std::cout << "Cat operator= called" << std::endl;

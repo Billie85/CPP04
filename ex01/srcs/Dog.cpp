@@ -22,13 +22,7 @@ Dog::Dog(const Dog &other): Animal(other)
 	_Brain = new Brain(*other._Brain);//<-here
 }
 
-/* Dog &Dog::operator=(const Dog &other)
-{
-	this->Animal::type = other.type;
-	return (*this);
-} */
-
-Dog &Dog::operator=(const Dog &other)//after
+Dog &Dog::operator=(const Dog &other)
 {
     Animal::operator=(other);
     if (this != &other) {

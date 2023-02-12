@@ -1,4 +1,4 @@
-NAME	= Polymorphism
+NAME	= World
 
 SRCS	= main.cpp \
 		  Cat.cpp \

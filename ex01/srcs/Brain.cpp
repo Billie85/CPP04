@@ -7,7 +7,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain &other)
 {
-	std::cout << this << "Brain copy constructor" << std::endl;
+	std::cout << "Brain copy constructor" << std::endl;
 	for (size_t i = 0; i < Idea; i++)
 	{
 		this->ideas[i] = other.ideas[i];
